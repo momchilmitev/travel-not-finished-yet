@@ -1,0 +1,150 @@
+.header {
+	margin-bottom: 300px;
+
+	.navigation {
+		&__logo {
+			position: relative;
+			top: 10px;
+			left: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__items {
+			height: 0;
+			opacity: 0;
+			text-align: center;
+			transition: all 1s;
+
+			&--show {
+				height: 100%;
+				opacity: 1;
+				margin: 25px 5px;
+				padding: 5px;
+			}
+		}
+
+		&__item {
+			padding: 2px;
+			margin: 5px;
+
+			& a {
+				font-family: Inter;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 19px;
+				text-decoration: none;
+				color: #b8becd;
+			}
+
+			&--active a {
+				color: #202336;
+				font-weight: 700;
+			}
+		}
+
+		@include for-tablet-portrait-up {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&__logo {
+				position: initial;
+				margin-left: 15px;
+			}
+
+			&__items {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 100%;
+				opacity: 1;
+				margin: 15px 5px;
+				padding: 5px;
+			}
+
+			&__item {
+				margin: 0 10px;
+			}
+
+			.btn {
+				margin: 10px 15px;
+			}
+		}
+	}
+
+	.search {
+		margin: 10px;
+		padding: 10px;
+
+		&__title {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		&__subtitle {
+			margin: 10px 0;
+		}
+
+		&__filters {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			& select {
+				width: 100%;
+				margin: 10px 0;
+				padding: 5px;
+				border-radius: 8px;
+				cursor: pointer;
+			}
+		}
+
+		&__image {
+			margin-top: 50px;
+		}
+
+		@include for-tablet-portrait-up {
+			display: flex;
+			justify-content: space-between;
+
+			&__elements {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				text-align: left;
+			}
+
+			&__title {
+				font-size: 64px;
+				width: 80%;
+				text-align: left;
+			}
+
+			&__subtitle {
+				font-size: 22px;
+			}
+
+			&__filters {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+
+				& select {
+					flex: 1 2 220px;
+					margin: 20px;
+					padding: 15px;
+
+					&:nth-child(1),
+					&:nth-child(3) {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}

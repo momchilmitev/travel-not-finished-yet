@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<title>Travel</title>
+	</head>
+	<body>
+		<div class="main-container">
+			<header class="header">
+				<nav class="navigation">
+					<img
+						class="navigation__logo"
+						id="logo"
+						src="/assets/images/logo.svg"
+						alt="logo"
+					/>
+					<ul class="navigation__items" id="nav-content">
+						<li class="navigation__item navigation__item--active">
+							<a href="#">Home</a>
+						</li>
+						<li class="navigation__item"><a href="#">Destinations</a></li>
+						<li class="navigation__item"><a href="#">About</a></li>
+						<li class="navigation__item"><a href="#">Partner</a></li>
+						<button class="btn btn--secondary">Login</button>
+						<button class="btn btn--primary">Register</button>
+					</ul>
+				</nav>
+				<section class="search">
+					<section class="search__elements">
+						<h1 class="search__title">Explore and Travel</h1>
+						<h4 class="search__subtitle">Holiday finder</h4>
+						<div class="search__filters">
+							<select name="location" id="location">
+								<option value="">Location</option>
+							</select>
+							<select name="activity" id="activity">
+								<option value="">Activity</option>
+							</select>
+							<select name="grade" id="grade">
+								<option value="">Grade</option>
+							</select>
+							<select name="date" id="date">
+								<option value="">Date</option>
+							</select>
+						</div>
+						<button class="btn btn--primary">Explore</button>
+					</section>
+					<img
+						class="search__image"
+						src="/assets/images/section-image-1.svg"
+						alt="section image"
+					/>
+				</section>
+			</header>
+		</div>
+
+		<script src="/scripts/index.js"></script>
+	</body>
+</html>
